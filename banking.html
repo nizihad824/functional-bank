@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-5xl text-center">Let's get some <span class=" text-sky-400/100 font-semibold">Money</span>  </h1>
+
+    <section class="mt-7">
+        <div class="grid grid-cols-3 w-3/4 mx-auto gap-4">
+            <div class="bg-blue-400 p-8 rounded">
+                <h3 class="text-2xl">Deposit</h3>
+               <h4  class="text-3xl">€<span id="deposit-total">00</span></h4>
+            </div>
+            <div class="bg-yellow-400 p-8 rounded">
+                <h3 class="text-2xl">Witdraw</h3>
+               <h4  class="text-3xl">€<span id="withdraw-total" >00</span> </h4>
+            </div>
+            <div class="bg-green-400 p-8 rounded">
+                <h3 class="text-2xl">Balance</h3>
+               <h4 class="text-3xl">€<span id="balance-total">1200</span></h4>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Deposit and Withdraw -->
+    <section class="mt-8">
+        <div class="grid grid-cols-2 gap-4 ">
+            <div class="bg-red-100 p-8 rounded ">
+                <h3 class="text-3xl">Please Deposit</h3>
+                <div>
+                    <input type="text" placeholder="€ amount you want to deposit" class="block border rounded mb-4 w-3/4 px-2 border-grey-400 " id="deposit-input">
+                    <button class=" border px-3 py-1  font-medium rounded bg-yellow-500 text-white " id="deposit-button">Deposit</button>
+               </div>
+            </div>
+            <div class="bg-green-100 p-8 rounded">
+                <h3 class="text-3xl">Please Withdraw</h3>
+                <div>
+                    <input type="text" placeholder="€ amount you want to withdraw" class="block border rounded mb-4 w-3/4 px-2 border-grey-400 " id="withdraw-input">
+                    <button class=" border px-3 py-1  font-medium rounded bg-yellow-500 text-white " id="withdraw-button">Withdraw</button>
+               </div>
+            </div>
+            
+            
+
+        </div>
+    </section>
+
+    <script src="js/banking.js"></script> 
+</body>
+</html>
