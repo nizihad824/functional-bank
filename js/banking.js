@@ -64,7 +64,41 @@ document.getElementById('deposit-button').addEventListener('click', function () 
         updateBalance(depositAmount, true);
     }
 });
+// handle withdraw button 
+document.getElementById('withdraw-button').addEventListener('click', function () {
+    /*     
+    const withdrawInput = document.getElementById('withdraw-input');
+        const withdrawAmountText = withdrawInput.value;
+        const withdrawAmount = parseFloat(withdrawAmountText); */
 
+
+    // get and update withdraw total
+    /* 
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const previousWithdrawTotalText = withdrawTotal.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdrawTotalText);
+    withdrawTotal.innerText = previousWithdrawTotal + withdrawAmount; */
+
+
+    // update balance after withdraw
+    /* 
+        const balanceTotal = document.getElementById('balance-total');
+        const balanceTotalText = balanceTotal.innerText;
+        const previousBalanceTotal = parseFloat(balanceTotalText);
+    
+        balanceTotal.innerText = previousBalanceTotal - withdrawAmount; */
+
+    const withdrawAmount = getInputValue('withdraw-input');
+    const currentBalance = getCurrentBalance();
+    if (withdrawAmount > 0 && withdrawAmount < currentBalance) {
+        updateTotalField('withdraw-total', withdrawAmount);
+        updateBalance(withdrawAmount, false);
+    }
+    if (withdrawAmount > currentBalance) {
+        console.log('You can not withdraw more than what you have in your account');
+    }
+});
+© 2022 GitHub, Inc.
 
  
     /* const depositInput = document.getElementById('deposit-input');
