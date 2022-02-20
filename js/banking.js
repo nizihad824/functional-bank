@@ -1,5 +1,5 @@
 function getInputValue(inputId) {
-    debugger;
+    // debugger;
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
     const amountValue = parseFloat(inputAmountText);
@@ -36,7 +36,7 @@ function updateBalance(amount, isAdd) {
     }
 }
 
-document.getElementById('deposit-button').addEventListener('click', function () {
+document.getElementById('deposit-button').addEventListener('click', function() {
 
     const depositAmount = getInputValue('deposit-input');
     if (depositAmount > 0) {
@@ -44,6 +44,7 @@ document.getElementById('deposit-button').addEventListener('click', function () 
         updateBalance(depositAmount, true);
     }
 });
+
    
 // handle withdraw button 
 document.getElementById('withdraw-button').addEventListener('click', function () {
